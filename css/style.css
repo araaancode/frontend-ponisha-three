@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
 :root {
     --primary-color: #004f71;
     --secondary-color: #1b3a54;
@@ -6,42 +12,56 @@
 nav {
     background-color: #004f71;
     color: #fff;
+
 }
 
 
-
-.banner {
-    position: relative;
-    overflow: hidden;
+.sticky-div {
+    position: fixed;
+    top: 45%;
+    right: 20px;
+    transform: translateY(-50%);
 }
 
-.banner-left img {
-    width: 100%;
-    height: auto;
+.rotated-text {
+    transform: rotate(270deg);
+    transform-origin: right center;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    color: #1b3a54;
+    background-color: #ffe943;
+    padding: 20px;
 }
 
-.banner-right img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.rotated-list {
+    transform: rotate(270deg);
+    transform-origin: right center;
+    list-style-type: none;
+    padding: 0;
 }
 
-.banner-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
+.rotated-list li {
+    margin-bottom: 10px;
 }
 
+.fixed-list {
+    position: fixed;
+    top: 65%; 
+    right: 0;
+    list-style: none;
+    padding: 0;
+    background-color: #00577b;
+  }
+  
+  .fixed-list li {
+    padding: 10px 5px ;
+  }
+  
+  .fixed-list li:last-child {
+    border-bottom: none;
+  }
 
-
-.hospital-img {
-    width: 100%;
-    height: auto;
-}
-
+/* card */
 .card-img-top {
     height: 180px;
     object-fit: cover;
@@ -70,6 +90,17 @@ nav {
     color: #fff;
     filter: invert(1%) sepia(0%) saturate(0%) hue-rotate(0) brightness(119%) contrast(119%);
     font-weight: bold;
+}
+
+.svg-btn {
+    fill: #1b3a54;
+    /* This will set the fill color */
+    width: 45px;
+    height: 45px;
+    color: #1b3a54;
+    filter: invert(80%) sepia(25%) saturate(800%) hue-rotate(200deg) brightness(80%) contrast(80%);
+    font-weight: bold;
+    margin-right: 5px;
 }
 
 .ok-svg {
@@ -160,6 +191,14 @@ nav {
     padding: 10px 50px;
 }
 
+.vertical-line {
+    border-left: 2px solid #00577b;
+    /* Creates the vertical line */
+    height: 500px;
+    /* Height of the line */
+    margin-left: 20px;
+    /* Optional spacing */
+}
 
 
 .search-container {
@@ -185,9 +224,7 @@ nav {
 }
 
 
-
-
-
+/* about */
 .about-icons {
     display: flex;
     flex-direction: row;
@@ -197,29 +234,94 @@ nav {
 }
 
 .about-img {
-    width: 150px;
+    width: 100px;
     height: 750px;
 }
 
-.about-card {
-    background-color: #ccc;
-    margin: 20px 500px 10px 0;
-    color: #1b3a54;
-    padding: 20px;
-    width: 800px;
+
+.middle {
     display: flex;
+    color: #1b3a54;
+    justify-content: baseline;
+}
+
+.about-card {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    width: 800px;
+    background-color: #dfdfdf;
+    border: 0;
+    border-radius: 0;
+    color: #1b3a54;
+    margin: 0 auto;
     align-items: center;
     justify-content: center;
 }
 
-.middle {
+@media (min-width: 768px) {
+    .card {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.column {
+    padding: 10px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    margin: 0 20px;
+    justify-content: end;
+}
+
+.column:first-child {
+    border-left: none;
+}
+
+.column h2,
+.column p {
+    margin-bottom: 10px;
+}
+
+.button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.column .button {
+    margin-top: auto;
+}
+
+.column-last .text-above-button {
+    margin-bottom: 10px;
+}
+
+.column-last .center-btn {
+    margin: auto 0;
+}
+
+.column-last .bottom-btn {
+    margin-bottom: auto;
+}
+
+.row-1 {
+    background-color: #1b3a54;
+    color: white;
+}
+
+.row-2 {
+    background-color: white;
     color: #1b3a54;
 }
 
+.haspa-card {
+    padding: 40px;
+}
 
-
+/* properties */
 .properties {
     background-color: #f3f4f6;
 }
@@ -251,8 +353,6 @@ nav {
     font-size: 30px;
     color: #1b3a54;
 }
-
-
 
 .card-three {
     background-color: #f3f4f6;
@@ -295,6 +395,14 @@ nav {
 
 .card-text {
     color: #1b3a54;
+}
+
+.prop-card {
+    padding: 10px;
+}
+
+.prop-card .card-body {
+    padding: 20px;
 }
 
 .card-header-one,
@@ -349,10 +457,6 @@ nav {
 }
 
 
-
-
-
-/* Custom styles for the layout */
 .fixed-image {
     width: 100%;
     height: auto;
@@ -407,27 +511,63 @@ nav {
 
 
 .camera-btn {
-    border-radius: 30px;
+    border-radius: 50px;
     color: #1b3a54;
     border: 0;
-    padding: 5px 20px;
+    padding: 25px 10px;
     background-color: #ffe943;
+    width: 35%;
+}
+
+.text-large {
+    font-size: 20px;
 }
 
 .camera-btn span {
     margin: 5px;
 }
 
-.camera-btn img {
-    fill: #fff;
-    width: 30px;
-    height: 30px;
-    color: #1b3a54;
-    filter: invert(1%) sepia(0%) saturate(0%) hue-rotate(0) brightness(119%) contrast(119%);
-    font-weight: bold;
+.umch_blanco {
+    width: 75%;
+    height: 20%;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.umfst-logo-neu_white {
+    width: 75%;
+    height: 40%;
+    margin-bottom: 5px
+}
+
+.bordered-image {
+    border: 1px solid white;
+    padding: 1px;
+    background-color: white;
+    width: 30%;
+    height: 40%;
+    left: 0;
+    right: 20px;
+    margin-top: 50px;
+}
+
+.img-fluid {
+    width: 20%;
 }
 
 
+.social-media-icon {
+    /* width: 40px;
+    height: 40px; */
+}
+
+.second-row-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 .blue-button {
     padding: 8px 20px;
@@ -483,21 +623,15 @@ nav {
     font-weight: bold;
 }
 
-
-
-/* Custom styles for rows */
 .row-blue {
     background-color: #1b3a54;
     color: white;
-    /* White text for better contrast on blue background */
 }
 
 .row-white {
     background-color: white;
     color: black;
-    /* Default black text for contrast on white background */
 }
-
 
 
 .primary-color {
@@ -515,18 +649,23 @@ nav {
 
 
 
-.text-right-align {
-    text-align: right;
+.text-left-align {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: right;
+    justify-content: end;
 }
 
 .card-horizontal {
     display: flex;
     flex: 1 1 auto;
     background-color: #dfe4e8;
+    margin: 0 auto;
 }
 
 .card-horizontal img {
-    width: 100%;
+    width: 50%;
     object-fit: cover;
 }
 
@@ -537,10 +676,30 @@ nav {
     align-items: center;
 }
 
-.body-right {
-    padding: 25px;
-}
+
 
 .card-color {
     background-color: #f4f4f4;
+}
+
+/* banner */
+.header-bg {
+    background-image: url('../assets/img/banner1.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+
+/* colors */
+.text-gray {
+    color: #888;
+}
+
+.text-yellow {
+    color: #ffe943;
+}
+
+.bg-blue {
+    background-color: #00678f;
 }

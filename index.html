@@ -7,11 +7,11 @@
     <title>UMCH</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
     <link rel="shortcut icon" href="https://edu.umch.de/wp-content/uploads/2018/09/favicon-32x32.opt_.png"
         type="image/x-icon">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 </head>
 
 <body>
@@ -102,30 +102,77 @@
     </div>
 
     <!-- Banner -->
-    <div class="container-fluid">
-        <div class="row banner">
-            <div class="col-8 banner-left p-0">
-                <img src="banner.jpeg" alt="Left Image">
+    <header class="position-relative w-100 header-bg" style="height: 550px;width: 100%;">
+        <!-- Vertical Divs at the Bottom Right -->
+        <!-- <div class="position-fixed top-50 end-0 d-flex flex-column align-items-end gap-4"
+            style="right: 0; margin: 0; padding: 0;">
+            <div style="color: #004f71; margin-bottom: 70px; transform: rotate(270deg);"
+                class="bg-warning text-white px-3 py-3">
+                <p>Jetzt bewerben</p>
             </div>
+            <div style="background-color: #004f71;transform: rotate(270deg);"
+                class="text-white px-2 py-1 z-index-10 mt-4">
+                <div class="d-flex gap-2">
+                    <img class="" width="40" height="40" style="margin-bottom: 15px; transform: rotate(90deg);"
+                        src="assets/icon/Icon Telefon.svg" alt="Telefon">
+                    <div style="border: 1px solid #ffe943; border-radius: 50%;width: 42px;height: 42px;" class="p-1">
+                        <img class="" width="30" height="30" style="margin-bottom: 15px; transform: rotate(90deg);"
+                            src="assets/icon/Icon Camera.svg" alt="Camera">
+                    </div>
+                    <div style="border: 1px solid #ffe943; border-radius: 50%;width: 42px;height: 42px;" class="p-1">
+                        <img class="" width="30" height="30" style="margin-bottom: 15px; transform: rotate(90deg);"
+                            src="assets/icon/Icon Letter.svg" alt="Letter">
+                    </div>
+                    <div style="border: 1px solid #ffe943; border-radius: 50%;width: 42px;height: 42px;" class="p-1">
+                        <img class="" width="30" height="30" style="margin-bottom: 15px; transform: rotate(90deg);"
+                            src="assets/icon/Icon Uni.svg" alt="Hospital">
+                    </div>
+                </div>
+            </div>
+        </div> -->
 
-            <div class="col-4 banner-right p-0">
-                <img src="assets/bilder/b-header.svg" alt="Right Image">
-            </div>
-
-            <!-- Centered Text -->
-            <div class="banner-text">
-                <h1>tudiengebühren &
-                    Finanzierung</h1>
-            </div>
+        <!-- Centered Bottom Button -->
+        <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4 mt-2">
+            <button class="btn btn-warning text-dark px-4 py-2 rounded-pill shadow" style="width: 200px;">Jetzt
+                bewerben</button>
         </div>
+    </header>
+
+
+    <div class="sticky-div">
+        <p class="rotated-text">Jetzt bewerben</p>
     </div>
+
+    <ul class="fixed-list">
+        <li> <img class="" width="40" height="40" style="margin-bottom: 15px; transform: rotate(0);"
+                src="assets/icon/Icon Telefon.svg" alt="Telefon"></li>
+        <li>
+            <div style="border: 1px solid #ffe943; border-radius: 50%;width: 42px;height: 42px;" class="p-1">
+                <img class="" width="30" height="30" style="margin-bottom: 15px; transform: rotate(0);"
+                    src="assets/icon/Icon Camera.svg" alt="Camera">
+            </div>
+        </li>
+        <li>
+            <div style="border: 1px solid #ffe943; border-radius: 50%;width: 42px;height: 42px;" class="p-1">
+                <img class="" width="30" height="30" style="margin-bottom: 15px; transform: rotate(0);"
+                    src="assets/icon/Icon Letter.svg" alt="Letter">
+            </div>
+        </li>
+        <li>
+            <div style="border: 1px solid #ffe943; border-radius: 50%;width: 42px;height: 42px;" class="p-1">
+                <img class="" width="30" height="30" style="margin-bottom: 15px; transform: rotate(0);"
+                    src="assets/icon/Icon Uni.svg" alt="Hospital">
+            </div>
+        </li>
+    </ul>
+
 
     <!-- About -->
     <div class="middle">
         <div class="col-md-2 about-img">
             <img src="assets/bilder/Blue Color gradient2.png" alt="Blue Color gradient2" class="about-img">
         </div>
-        <div style="margin: 50px auto;" class="col-md-6">
+        <div style="margin: 2px auto;" class="col-md-6">
             <div class="about-icons mt-4">
                 <i class="fas fa-home me-2"></i>
                 <span>Studium</span>
@@ -133,96 +180,95 @@
                 <span>Studiengebühren und Finanzierung</span>
             </div>
 
-
-
             <div class="container mt-5">
                 <!-- First Row with Text -->
                 <div class="row mb-4">
                     <div class="col-12">
-                        <p class="text-center">Investieren Sie sinnvoll in Ihre Zukunft. </p>
-                        <h2 class="text-center">Unsere Studiengebühren in der Übersicht</h2>
+                        <p class="text-center text-gray font-bold">Investieren Sie sinnvoll in Ihre Zukunft.</p>
+                        <h3 class="text-center font-bold">Unsere Studiengebühren in der Übersicht</h3>
+                        <smal class="mt-4">Um den Studierenden ein erstklassiges Medizinstudium zu ermöglichen, werden
+                            Studiengebühren erho-
+                            ben. Sie ermöglichen die Nutzung einer hochmodernen und stetig wachsenden
+                            Campus-Infrastruktur im
+                            Rahmen eines englischsprachigen Medizinstudiengangs, der von hochqualifizierten Lehrkräften
+                            durchge-
+                            führt wird. Auf diese Weise erhalten die Studierenden eine ganzheitliche medizinische
+                            Ausbildung.</small>
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-12">
-                        <div class="about-card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <!-- First Column -->
-                                    <div class="col-md-4">
-                                        <h6 class="">Bewerber aus EU-Ländern</h6>
-                                        <p class="card-text">(einschließlich EWR-Ländern, dem Vereinigten
-                                            Königreich, der Schweiz, Andorra, Monaco, San Marino und Vatikanstadt)</p>
-
-                                        <p class="font-bold">1. bis 6. Studienjahr</p>
-                                        <p>am Campus in Hamburg und in den UMFST-UMCH-</p>
-                                        <p>Lehrkrankenhäusern</p>
-                                        <div class="container mt-5">
-                                            <div class="row row-blue py-3">
-                                                <div class="col-12 text-center">
-                                                    <h5>Pro Semester</h5>
-                                                </div>
-                                            </div>
-                                            <div class="row row-white py-3">
-                                                <div class="col-12 text-center">
-                                                    <p>14.900 €</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Second Column -->
-                                    <div class="col-md-4">
-                                        <h6 class="">Bewerber aus allen übrigen Ländern</h6>
-
-                                        <p class="font-bold">1. bis 6. Studienjahr</p>
-                                        <p>am Campus in Hamburg und in den UMFST-UMCH-Lehrkrankenhäusern</p>
-
-                                        <div class="container mt-5">
-                                            <div class="row row-blue py-3">
-                                                <div class="col-12 text-center">
-                                                    <h5>Pro Semester</h5>
-                                                </div>
-                                            </div>
-                                            <div class="row row-white py-3">
-                                                <div class="col-12 text-center">
-                                                    <p>14.900 €</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Third Column -->
-                                    <div class="col-md-4">
-                                        <h6 class="">Einmalige Gebühren</h6>
-
-                                        <h6 class="">Einmalige Gebühren</h6>
-                                        <div class="container">
-                                            <div class="row row-blue py-3">
-                                                <div class="col-12 text-center">
-                                                    <h5>Pro Semester</h5>
-                                                </div>
-                                            </div>
-                                            <div class="row row-white py-3">
-                                                <div class="col-12 text-center">
-                                                    <p>14.900 €</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <h6 class="">Bewerbungsgebühr</h6>
-                                        <div class="container">
-                                            <div class="row row-blue py-3">
-                                                <div class="col-12 text-center">
-                                                    <h5>Pro Semester</h5>
-                                                </div>
-                                            </div>
-                                            <div class="row row-white py-3">
-                                                <div class="col-12 text-center">
-                                                    <p>14.900 €</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                <div class="col-md-12 about-card">
+                    <!-- 1 -->
+                    <div class="column" style="margin-left: 20px;">
+                        <h6>Bewerber aus EU-Ländern</h6>
+                        <p>(einschließlich EWR-Ländern, dem Vereinigten
+                            Königreich, der Schweiz, Andorra, Monaco, San Marino und Vatikanstadt)</p>
+                        <h6>1. bis 6. Studienjahr</h6>
+                        <p>am Campus in Hamburg und in den UMFST-</p>
+                        <p>UMCH-</p>
+                        <p>Lehrkrankenhäusern</p>
+                        <div style="width: 200px;" class="p-2">
+                            <div class="row row-1 py-3">
+                                <div class="col">
+                                    <h6>Pro Semester</h6>
+                                </div>
+                            </div>
+                            <div class="row row-2 py-3">
+                                <div class="col">
+                                    <h6>14.900 €</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <!-- 2 -->
+                    <div class="column">
+                        <h6>Bewerber aus allen übrigen Ländern</h6>
+                        <h6 class="mt-5">1. bis 6. Studienjahr</h6>
+                        <p>am Campus in Hamburg und in den</p>
+                        <p>UMFST-UMCH-Lehrkrankenhäusern</p>
+                        <p></p>
+                        <p></p>
+                        <div style="width: 200px;" class="p-2 mt-5">
+                            <div class="row row-1 py-3">
+                                <div class="col">
+                                    <h6>Pro Semester</h6>
+                                </div>
+                            </div>
+                            <div class="row row-2 py-3">
+                                <div class="col">
+                                    <h6>17.400 €</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <!-- 3 -->
+                    <div class="column column-last">
+                        <h6>Einmalige Gebühren</h6>
+                        <h6 class="text-above-button mt-5">Bewerbungsgebühr</h6>
+                        <div style="width: 200px;" class="p-2">
+                            <div class="row row-1 py-3">
+                                <div class="col">
+                                    <h6>Einmalig</h6>
+                                </div>
+                            </div>
+                            <div class="row row-2 py-3">
+                                <div class="col">
+                                    <h6>595 €</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <h6 class="text-above-button mt-5">Einmalig</h6>
+                        <div style="width: 200px;" class="p-2">
+                            <div class="row row-1 py-3">
+                                <div class="col">
+                                    <h6>14.900 €</h6>
+                                </div>
+                            </div>
+                            <div class="row row-2 py-3">
+                                <div class="col">
+                                    <h6>14.900 €</h6>
                                 </div>
                             </div>
                         </div>
@@ -281,7 +327,7 @@
 
             <!-- Image Column -->
             <div class="col-md-6">
-                <img src="world.png" class="img-fluid" alt="Responsive Image">
+                <img width="100%" src="assets/img/world.png" class="" alt="Responsive Image">
             </div>
         </div>
     </section>
@@ -292,61 +338,92 @@
         <!-- First Row: Centered Text -->
         <div class="row my-4">
             <div class="col text-center">
-                <p class="mt-4 primary-color">Möglichkeiten zur Aufnahme eines Studienkredits</p>
-                <h1 class="primary-color">Studienfinanzierung</h1>
+                <h5 class="mt-4 primary-color text-gray mt-5">Möglichkeiten zur Aufnahme eines Studienkredits</h5>
+                <h2 class="primary-color font-bold">Studienfinanzierung</h2>
             </div>
         </div>
 
         <!-- Second Row: Card with Image on the Right and Text on the Left -->
         <div class="row my-4 card-right primary-color">
-            <div class="col-md-6">
-                <div class="">
-                    <div class="card-horizontal">
-                        <div class="card-body body-right">
-                            <div class="container">
-                                <div class="row align-items-center">
-                                    <div class="col">
-                                        <h2>Studienfinanzierungsmodell des
-                                            Kompetenz-Centers Heilberufe der
-                                            Hamburger Sparkasse AG (Haspa)</h2>
-                                        <p>Die Haspa hat für die Studierenden am UMCH ein Studienfinanzierungsmodell
-                                            entwickelt, das Ihnen den Weg in eine erfolgreiche Zukunft als Ärztin oder Arzt
-                                            ebnet.</p>
+            <div class="col-md-10">
+                <div class="card-horizontal">
+                    <div class="haspa-card">
+                        <div class="container p-0">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h3 class="flex-shrink-1 mb-4">Studienfinanzierungsmodell des
+                                    Kompetenz-Centers Heilberufe der
+                                    Hamburger Sparkasse AG (Haspa)</h3>
+                                <img src="assets/img/haspa2.png" alt="haspa2" class="img-fluid"
+                                    style="max-width: 150px;">
+                            </div>
+                        </div>
+                        <p>Das Kompetenz-Center Heilberufe der Haspa bietet den Studierenden des UMCH die
+                            Möglichkeit, einen Studienkredit für einen Teil der anfallenden Studiengebühren
+                            aufzunehmen. Der maximale Kreditbetrag liegt bei 100.000 €. Dieser muss erst nach
+                            Beendigung des Studiums zurückgezahlt werden. Die Auszahlungen passen sich den
+                            Zeitpunkten an, zu denen die Studiengebühren fällig werden. Während der Studienzeit
+                            fallen lediglich Zinsen auf den in Anspruch genommenen
+                            Kreditbetrag an.</p>
+
+                        <p class="mt-2 mb-4 font-bold">Individuell und flexibel</p>
+                        <p>Der Studienkredit wird an die jeweiligen Bedürfnisse der Studierenden angepasst und
+                            ist in drei Phasen gegliedert:</p>
+
+
+                        <div class="container my-5">
+                            <div class="row">
+                                <!-- Card 1 -->
+                                <div class="col-md-4 col-sm-12 mb-4">
+                                    <div class="prop-card h-100 bg-blue">
+                                        <div class="card-body">
+                                            <h2 class="card-title text-yellow text-center font-bold">1.</h2>
+                                            <p class="card-text text-white">Auszahlungs-
+                                                phase für die
+                                                insgesamt sechs
+                                                Studienjahre</p>
+                                        </div>
+
                                     </div>
-                                    <div class="col">
-                                        <!-- Empty Space -->
+                                </div>
+                                <!-- Card 2 -->
+                                <div class="col-md-4 col-sm-12 mb-4">
+                                    <div class="prop-card h-100 bg-blue">
+                                        <div class="card-body">
+                                            <h2 class="card-title text-yellow text-center font-bold">2.</h2>
+                                            <p class="card-text text-white">Optionale
+                                                Ruhephase (nur
+                                                Zinszahlung) von
+                                                max. einem Jahr</p>
+                                        </div>
+
                                     </div>
-                                    <div class="col">
-                                        <!-- Right Image -->
-                                        <img src="haspa.png" alt="Placeholder Image"
-                                            class="img-fluid">
+                                </div>
+                                <!-- Card 3 -->
+                                <div class="col-md-4 col-sm-12 mb-4">
+                                    <div class="prop-card h-100 bg-blue">
+                                        <div class="card-body">
+                                            <h2 class="card-title text-yellow text-center font-bold">3.</h2>
+                                            <p class="card-text text-white">Rückzahlungs-
+                                                phase von
+                                                max. sieben
+                                                Jahren</p>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
-                            <p>Das Kompetenz-Center Heilberufe der Haspa bietet den Studierenden des UMCH die
-                                Möglichkeit, einen Studienkredit für einen Teil der anfallenden Studiengebühren
-                                aufzunehmen. Der maximale Kreditbetrag liegt bei 100.000 €. Dieser muss erst nach
-                                Beendigung des Studiums zurückgezahlt werden. Die Auszahlungen passen sich den
-                                Zeitpunkten an, zu denen die Studiengebühren fällig werden. Während der Studienzeit
-                                fallen lediglich Zinsen auf den in Anspruch genommenen
-                                Kreditbetrag an.</p>
-
-                            <p class="mt-2 font-bold">Individuell und flexibel</p>
-                            <p>Der Studienkredit wird an die jeweiligen Bedürfnisse der Studierenden angepasst und
-                                ist in drei Phasen gegliedert:</p>
-                            
-                            <p>In den Studienkredit wird ein zweiter Kreditnehmer (bspw. ein Elternteil) mit
-                                aufgenommen, auf dessen Bonität die Kreditentscheidung abgestellt wird.</p>
                         </div>
-                        <img class="img-fluid" src="right_man.png" alt="Card image">
+                        <p>In den Studienkredit wird ein zweiter Kreditnehmer (bspw. ein Elternteil) mit
+                            aufgenommen, auf dessen Bonität die Kreditentscheidung abgestellt wird.</p>
                     </div>
+                    <img class="img-fluid" src="assets/img/right_man.png" alt="Card image">
                 </div>
             </div>
         </div>
 
         <!-- Third Row: Two Texts Aligned Left and Right -->
-        <div style="padding: 10px 100px;" class="row my-4 primary-color mx-auto">
-            <div class="col-6">
+        <div style="padding: 10px 120px;" class="row my-4 primary-color mx-auto">
+            <div class="col-8">
                 <h1>Haben Sie Fragen?</h1>
                 <p class="text-left">Das Kompetenz-Center Heilberufe der Haspa berät Angestellte, Selbst-
                     ständige, Studierende und Auszubildende in Heilberufen nicht nur zu
@@ -354,26 +431,26 @@
                     wie Versicherungen oder Altersvorsorge. Um weitere Informationen
                     über den UMCH-Studienkredit zu erhalten, wenden Sie sich gerne an:</p>
             </div>
-            <div class="col-6 text-right-align">
-                <img src="haspa.png" alt="">
-                <p class="font-bold">Vivien Böttger</p>
-                <p>Tel.: +49 (0) 40 3578-93521</p>
-                <p>Mob.: +49 (0) 151 1140 2364</p>
-                <p>E-Mail: Vivien.boettger@haspa.de</p>
+            <div class="col-4 text-left-align mb-4">
+                <img width="120" height="60" src="assets/img/haspa2.png" class="mb-4" alt="haspa2">
+                <span class="font-bold">Vivien Böttger</span>
+                <span>Tel.: +49 (0) 40 3578-93521</span>
+                <span>Mob.: +49 (0) 151 1140 2364</span>
+                <span>E-Mail: Vivien.boettger@haspa.de</span>
             </div>
         </div>
     </div>
 
- 
+
     <!-- Text and Button -->
     <section class="container my-5">
         <div class="d-flex justify-content-between align-items-center">
-            <p style="color: #1b3a54;font-weight: bold;font-size: 20px;">Vereinbaren Sie kostenlos und unverbindlich
+            <p class="primary-color font-bold pl-5" style="font-size: 25px;">Vereinbaren Sie kostenlos und unverbindlich
                 einen
                 Online-Beratungstermin inklusive virtueller Campustour.</p>
             <button class="camera-btn">
-                <i class="fas fa-camera"></i>
-                <span>Online Beratungstermin</span>
+                <img class="svg-btn" src="assets/icon/Icon Camera.svg" alt="Camera">
+                <span class="text-large">Online Beratungstermin</span>
             </button>
         </div>
     </section>
@@ -381,11 +458,10 @@
     <!-- Footer -->
     <footer class="text-white px-4 py-4" style="background-color: #004d6e;">
         <!-- First Row -->
-        <div class="container mx-auto row row-cols-1 row-cols-md-4 g-3 px-4 py-4">
+        <div class="container mx-auto row row-cols-1 row-cols-md-4 g-3 px-4 pt-4">
             <!-- First Column: Image with text below it -->
             <div class="col text-center">
-                <img width="200px" height="100px" src="assets/logos/umch_blanco-opt.png" alt="umch_blanco"
-                    class="d-block mx-auto mb-3">
+                <img src="assets/logos/umch_blanco-opt.png" alt="umch_blanco" class="d-block mx-auto mb-2 umch_blanco">
                 <p class="mt-2 text-left small">Universitätsmedizin Neumarkt am Mieresch Campus Hamburg</p>
             </div>
             <!-- Second Column: Contact Information -->
@@ -398,14 +474,14 @@
             </div>
             <!-- Third Column: Image with text below it -->
             <div class="col text-center small">
-                <img width="65px" height="65px" src="assets/logos/UMCH rund.svg" alt="UMCH 2"
+                <img width="70px" height="70px" src="assets/logos/UMCH rund.svg" alt="UMCH 2"
                     class="d-block mx-auto mb-2">
                 <p>Impressum</p>
                 <p>Datenschutz</p>
             </div>
             <!-- Fourth Column: Image with text below it -->
             <div class="col text-center small">
-                <img width="65px" height="65px" src="assets/logos/Medaille.png" alt="Medaille"
+                <img width="70px" height="70px" src="assets/logos/Medaille.png" alt="Medaille"
                     class="w-20 h-20 d-block mx-auto">
                 <p class="mt-2">George Emil Palade</p>
                 <p>Nobelpreisgewinner</p>
@@ -421,12 +497,12 @@
         </div>
 
         <!-- Second Row -->
-        <div class="container mx-auto row row-cols-1 row-cols-md-4 g-3 px-4 py-4 small">
+        <div class="flex mx-auto row row-cols-1 row-cols-md-4 g-3 px-4 py-2 small second-row-footer">
             <!-- First Column: Image with text below it -->
             <div class="col text-center">
-                <img style="width: auto;height: 50px;" src="assets/logos/umfst-logo-neu_whiteENG-01-1-768x231.png"
-                    alt="umfst-logo-neu_whiteENG-01-1-7" class="d-block">
-                <p class="mt-2">Universität für Medizin, Pharmazie,</p>
+                <img src="assets/logos/umfst-logo-neu_whiteENG-01-1-768x231.png" alt="umfst-logo-neu_whiteENG-01-1-7"
+                    class="d-block umfst-logo-neu_white">
+                <p class="mt-4">Universität für Medizin, Pharmazie,</p>
                 <p>Naturwissenschaften und Technik</p>
                 <p>Neumarkt am Mieresch</p>
             </div>
@@ -439,18 +515,17 @@
             </div>
             <!-- Third Column: Social Media Logos -->
             <div class="col text-center">
-
                 <div class="d-flex justify-content-center align-items-center mt-4">
-                    <img src="assets/bilder/Samy_Hoddie_outline.png" alt="Samy_Hoddie_outline"
-                        class="img-fluid w-25 me-3">
-                    <img src="data:image/png;base64,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"
-                        alt="Image 2" class="img-fluid w-50 mt-4">
+                    <img src="assets/bilder/Samy_Hoddie_outline.png" alt="Samy_Hoddie_outline" class="img-fluid">
+                    <img src="data:image/png;base64,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"
+                        class="bordered-image">
+
                 </div>
                 <div class="d-flex justify-content-center mt-3">
-                    <a style="color: #fff;" href="#" class="mx-1"><i class="fab fa-instagram"></i></a>
-                    <a style="color: #fff;" href="#" class="mx-1"><i class="fab fa-tiktok"></i></a>
-                    <a style="color: #fff;" href="#" class="mx-1"><i class="fab fa-facebook"></i></a>
-                    <a style="color: #fff;" href="#" class="mx-1"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="mx-1 text-white social-media-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="mx-1 text-white"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="mx-1 text-white"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="mx-1 text-white"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
         </div>
@@ -473,8 +548,6 @@
                     </div>
 
                     <!-- Container for Three Texts on the Right -->
-
-
                     <div class="d-flex flex-wrap justify-content-center justify-content-md-end text-center">
                         <a href="#" style="color: #fff;" class="mx-2 text-decoration-underline mb-2 mb-md-0">UMCH
                             Shop</a>
